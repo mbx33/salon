@@ -1,0 +1,46 @@
+---
+interface LayoutProps {
+	title: string;
+	description: string;
+}
+
+// Supports weights 400-900
+// Supports weights 100-900
+import "../styles/globals.css";
+
+const { title, description, image, url } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta http-equiv="content-language" content="en" />
+		<meta name="robots" content="index, follow" />
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+		<link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5" />
+
+		<meta name="generator" content={Astro.generator} />
+		<meta name={title} content={description} />
+		<meta name="description" content={description} />
+
+		<meta
+			property="og:title"
+			content="Nail | Nail Service Salon  | Utah  | Svetas Nail Salon"
+		/>
+
+		<meta
+			property="og:description"
+			content="Svetas Nail Salon is a full-service nail salon that offers a variety of services to meet your needs. We offer a variety of services including manicures, pedicures, and nail art. Our experienced nail technicians are dedicated to providing you with the best service possible. We use only the highest quality products to ensure that your nails look beautiful and last a long time. Whether you are looking for a simple manicure or a full set of acrylic nails, we have the skills and experience to make your nails look amazing. Contact us today to schedule an appointment!"
+		/>
+
+		<title>{title}</title>
+	</head>
+	<body class="">
+		<slot />
+	</body>
+</html>
