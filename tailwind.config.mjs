@@ -18,6 +18,12 @@ export default {
 					950: "#6c6521",
 				},
 			},
+			fontSize: {
+				"10xl": ["12rem", { lineHeight: "1" }],
+			},
+			maxHeight: {
+				"615px": "615px",
+			},
 		},
 	},
 	plugins: [],
